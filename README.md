@@ -30,15 +30,24 @@ Our core contribution is not complexity for its own sake, but a **refined "less 
 
 ## Reproducing the Results
 
-All key findings of the paper can be reproduced by running a single Google Colab notebook.
+All key findings of the paper can be reproduced by running the two Google Colab notebooks provided in this repository.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/Coherence-Meter/blob/main/computational_narrative.ipynb) 
-*(Note: You will need to replace `YOUR_USERNAME` with your actual GitHub username after you create the repo).*
+### Main Findings (The Final Showdown)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algoplexity/Coherence-Meter/blob/main/computational_narrative.ipynb)
+
+Click the badge above to run the main `computational_narrative.ipynb`. This notebook tells the primary story of the paper and generates the definitive "Final Showdown" results from Section 4.
 
 **Instructions:**
-1. Click the "Open in Colab" badge above.
+1. Click the "Open in Colab" badge.
 2. In the Colab notebook, click `Runtime` -> `Run all`.
-3. The entire experimental pipeline, including all falsified prototypes and the final successful result, will execute in approximately 2-3 minutes. All tables and figures from the paper will be generated as output.
+3. The entire pipeline will execute in approximately 2-3 minutes, producing the final comparison table and figure.
+
+### Supplementary Evidence (Foundational Experiments)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/algoplexity/Coherence-Meter/blob/main/supplementary_evidence.ipynb)
+
+Click the badge above to run the `supplementary_evidence.ipynb` notebook. This contains the code to reproduce the foundational "failure" experiments from Sections 2 and 3 of the paper, including the "Rule 37 Delusion" figure and the "Microscope Failure" table.
 
 ---
 
@@ -53,3 +62,4 @@ If you find this work useful in your research, please consider citing our paper:
   journal = {arXiv preprint arXiv:XXXX.XXXXX},
   year    = {2025}
 }
+
