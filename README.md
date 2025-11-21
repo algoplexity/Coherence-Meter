@@ -18,13 +18,24 @@ Detecting structural breaks in non-stationary, multivariate time series remains 
 
 ---
 
-### 📂 Data Availability
+### 📊 Datasets & Experimental Design
 
-To ensure unassailable reproducibility, the datasets used in this research are hosted on an immutable scientific artifact on **Hugging Face**.
+To ensure robust validation, this research employs a **dual-track data strategy**, combining real-world historical case studies with large-scale systematic benchmarks.
 
-*   **Dataset Repository:** [algoplexity/computational-phase-transitions-data](https://huggingface.co/datasets/algoplexity/computational-phase-transitions-data)
-*   **Format:** Parquet (Compressed, Columnar)
-*   **Access:** The notebooks in this repository are equipped with a **Universal Cloud Loader** that fetches this data automatically. You do not need to download files manually.
+#### 1. Historical Case Study: The Q4 2018 U.S. Equity Downturn
+*   **Purpose:** Qualitative validation, falsification of "Microscope" (multivariate) approaches, and "mechanism" demonstration.
+*   **Source:** **Yahoo Finance** (Public API).
+*   **Assets:** Daily closing prices for a representative basket of US Blue Chips (`AAPL`, `MSFT`, `BA`, `CAT`, `DIS`, `GE`, `IBM`, `TSLA`).
+*   **Usage:** Used in `computational_narrative.ipynb` to demonstrate the Coherence Meter's detection logic on a known, real-world crisis.
+
+#### 2. Systematic Benchmark: The CrunchDAO Structural Break Dataset
+*   **Purpose:** Quantitative validation, statistical significance testing, and measurement of the **-31.21% Early-Warning Lead Time**.
+*   **Source:** **Hugging Face** (Immutable Scientific Artifact).
+*   **Assets:** 
+    *   `X_train.parquet`: 1,000+ continuous financial time series with non-stationary regimes.
+    *   `y_train.parquet`: Ground-truth labels for precise structural break timing.
+*   **Usage:** Used in `systematic_validation.ipynb`.
+*   **Access:** Hosted permanently at [algoplexity/computational-phase-transitions-data](https://huggingface.co/datasets/algoplexity/computational-phase-transitions-data).
 
 ---
 
