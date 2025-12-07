@@ -1,20 +1,18 @@
 # The Coherence Meter
 
-[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Data: Hugging Face](https://img.shields.io/badge/Data-Hugging%20Face-FFD21E.svg)](https://huggingface.co/datasets/algoplexity/computational-phase-transitions-data)
+[![DOI](https://img.shields.io/badge/DOI-10.13140%2FRG.2.2.19275.25122-blue.svg)](https://doi.org/10.13140/RG.2.2.19275.25122) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Data: Hugging Face](https://img.shields.io/badge/Data-Hugging%20Face-FFD21E.svg)](https://huggingface.co/datasets/algoplexity/computational-phase-transitions-data)
 
-An AIT-inspired framework for detecting systemic regime shifts in complex systems by measuring local rule incoherence.
+**Horizon 0 of the Algoplexity Research Program: Statistical Detection of Regime Shifts.**
 
-This repository contains the full computational appendices and all code required to reproduce the findings of the paper:
+An AIT-inspired framework for detecting systemic regime shifts in complex systems by measuring local rule incoherence. This repository contains the full computational appendices and code required to reproduce the findings of the paper:
 
-**"The Coherence Meter: A Hybrid AIT-Inspired Framework for Early Warning of Structural Breaks in Complex Systems"**
-
-**[Read the full paper on arXiv (Link to be added upon publication)]**
+**"The Coherence Meter: A Hybrid AIT-MDL Framework for Early-Warning Structural Break Detection in Complex Financial Systems"**
 
 ---
 
 ### Abstract
 
-Detecting structural breaks in non-stationary, multivariate time series remains a central challenge, particularly under distribution shift. This paper presents a falsification-driven investigation into AIT-inspired approaches to market regime detection. We begin by testing a direct predictive analogy: can an Elementary Cellular Automata (ECA) solver, trained on binary-encoded asset returns, forecast market dynamics? This hypothesis is cleanly falsified, revealing fundamental limits of domain transfer and encoding fidelity. Pivoting to Minimum Description Length (MDL) as a robust segmentation framework, we compare high-resolution multivariate analysis ("Microscope") against intelligent aggregation ("Stethoscope"), finding the latter consistently superior—validating a "less is more" principle. We then synthesize these insights into the **Coherence Meter**: a hybrid diagnostic that repurposes ECA predictive error as a proxy for *systemic rule incoherence*. In a case study on the Q4 2018 U.S. equity downturn, the Coherence Meter detects the regime collapse with **23.9 bits** of MDL evidence—**twice** that of the Stethoscope (11.7 bits). To test for generalizability, we conducted a systematic validation on a large, labeled dataset, revealing a more profound capability: the Coherence Meter functions as a powerful **early-warning system**, detecting the genesis of instability with a mean lead time of **31.21%** relative to the pre-break period. Our core contribution is not complexity for its own sake, but a refined "less is more": the final decision framework must be simple and robust, yet powerfully informed by sophisticated, second-order diagnostics.
+Detecting structural breaks in non-stationary, multivariate time series remains a central challenge, particularly under distribution shift. This paper presents a falsification-driven investigation into Algorithmic Information Theory (AIT) inspired approaches to market regime detection. We begin by testing a direct predictive analogy: can an Elementary Cellular Automata (ECA) solver, trained on binary-encoded asset returns, forecast market dynamics? This hypothesis is cleanly falsified, revealing fundamental limits of domain transfer and encoding fidelity. Pivoting to Minimum Description Length (MDL) as a robust segmentation framework, we compare high-resolution multivariate analysis ("Microscope") against intelligent aggregation ("Stethoscope"), finding the latter consistently superior—validating a "less is more" principle. We then synthesize these insights into the Coherence Meter: a hybrid diagnostic that repurposes ECA predictive error as a proxy for systemic rule incoherence. In a case study on the Q4 2018 U.S. equity downturn, the Coherence Meter detects the regime collapse with 23.9 bits of MDL evidence—twice that of the Stethoscope (11.7 bits). To test for generalizability, we conducted a systematic validation on the Algoplexity Structural Break Benchmark (hosted on Hugging Face). This dual-phase experiment revealed a profound capability: the Coherence Meter functions as a powerful early-warning system, detecting instability with a mean lead time of 31.21% in-sample and 39.37% on unseen, out-of-sample data. Our core contribution is not complexity for its own sake, but a refined "less is more": the final decision framework must be simple and robust, yet powerfully informed by sophisticated, second-order diagnostics.
 
 ---
 
@@ -28,12 +26,13 @@ To ensure robust validation, this research employs a **dual-track data strategy*
 *   **Assets:** Daily closing prices for a representative basket of US Blue Chips (`AAPL`, `MSFT`, `BA`, `CAT`, `DIS`, `GE`, `IBM`, `TSLA`).
 *   **Usage:** Used in `computational_narrative.ipynb` to demonstrate the Coherence Meter's detection logic on a known, real-world crisis.
 
-#### 2. Systematic Benchmark: The CrunchDAO Structural Break Dataset
-*   **Purpose:** Quantitative validation, statistical significance testing, and measurement of the **-31.21% Early-Warning Lead Time**.
+#### 2. Systematic Benchmark: The Algoplexity Structural Break Dataset
+*   **Purpose:** Quantitative validation of **Generalization Capability**. We measure Early-Warning Lead Time on both In-Sample (**-31.21%**) and Out-of-Sample (**-39.37%**) data.
 *   **Source:** **Hugging Face** (Immutable Scientific Artifact).
 *   **Assets:** 
-    *   `X_train.parquet`: 1,000+ continuous financial time series with non-stationary regimes.
+    *   `X_train.parquet`: 1,000+ continuous financial time series (In-Sample Training).
     *   `y_train.parquet`: Ground-truth labels for precise structural break timing.
+    *   `X_test.reduced.parquet`: Unseen series from the Falcon competition (Out-of-Sample Generalization).
 *   **Usage:** Used in `systematic_validation.ipynb`.
 *   **Access:** Hosted permanently at [algoplexity/computational-phase-transitions-data](https://huggingface.co/datasets/algoplexity/computational-phase-transitions-data).
 
@@ -82,20 +81,21 @@ Click the badge above to run `supplementary_evidence.ipynb`. This notebook conta
 
 ### Citation
 
-If you find this work useful in your research, please consider citing our paper and this repository.
+If you find this work useful in your research, please cite the permanent DOI:
 
 ```bibtex
-@article{mak2025coherence,
-  title   = {The Coherence Meter: A Hybrid AIT-Inspired Framework for Early Warning of Structural Breaks in Complex Systems},
+@misc{mak2025coherence,
+  title   = {The Coherence Meter: A Hybrid AIT-MDL Framework for Early-Warning Structural Break Detection in Complex Financial Systems},
   author  = {Mak, Yeu Wen},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
-  year    = {2025}
+  year    = {2025},
+  publisher = {ResearchGate},
+  doi     = {10.13140/RG.2.2.19275.25122},
+  url     = {https://doi.org/10.13140/RG.2.2.19275.25122}
 }
 
 @misc{mak2025coherence_code,
   author = {Mak, Yeu Wen},
   title  = {The Coherence Meter: Code and Computational Appendices},
   year   = {2025},
-  url    = {https://github.com/algoplexity/Coherence-Meter},
-  doi    = {10.5281/zenodo.XXXXXXX}
+  url    = {https://github.com/algoplexity/Coherence-Meter}
 }
