@@ -1,6 +1,6 @@
 # The Coherence Meter
 
-[![DOI](https://img.shields.io/badge/DOI-10.13140%2FRG.2.2.19275.25122-blue.svg)](https://doi.org/10.13140/RG.2.2.19275.25122) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Data: Hugging Face](https://img.shields.io/badge/Data-Hugging%20Face-FFD21E.svg)](https://huggingface.co/datasets/algoplexity/computational-phase-transitions-data)
+[![DOI](https://img.shields.io/badge/DOI-10.13140/%2FRG.2.2.30347.55847-blue.svg)](https://doi.org/10.13140/RG.2.2.30347.55847) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Data: Hugging Face](https://img.shields.io/badge/Data-Hugging%20Face-FFD21E.svg)](https://huggingface.co/datasets/algoplexity/computational-phase-transitions-data)
 
 **Horizon 0 of the Algoplexity Research Program: Statistical Detection of Regime Shifts.**
 
