@@ -1,6 +1,6 @@
 # The Somatic Marker of Markets (The Coherence Meter)
 
-[![DOI](https://img.shields.io/badge/DOI-10.13140%2FRG.2.2.35243.09767-blue.svg)](https://doi.org/10.13140/RG.2.2.35243.09767) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Data: Hugging Face](https://img.shields.io/badge/Data-Hugging%20Face-FFD21E.svg)](https://huggingface.co/datasets/algoplexity/computational-phase-transitions-data)
+[![SSRN](https://img.shields.io/badge/SSRN-5914102-blue.svg)](https://ssrn.com/abstract=5914102)[![DOI](https://img.shields.io/badge/DOI-10.13140%2FRG.2.2.35243.09767-blue.svg)](https://doi.org/10.13140/RG.2.2.35243.09767) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Data: Hugging Face](https://img.shields.io/badge/Data-Hugging%20Face-FFD21E.svg)](https://huggingface.co/datasets/algoplexity/computational-phase-transitions-data)
 
 **Horizon 0 of the Algoplexity Research Program: Falsifying Statistical Complexity.**
 
